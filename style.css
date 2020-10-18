@@ -1,0 +1,210 @@
+/* Common */
+html {
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 14px;
+  line-height: 1;
+  color: #101010;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 948px;
+  margin: 0 auto;
+  padding: 80px 15px;
+}
+
+.title {
+  font-size: 3.5em;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.title strong {
+  font-weight: 800px;
+  color: #4954d8;
+}
+
+.description {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  text-align: center;
+  background: #4954d8;
+  color: #fff;
+  border: none;
+  border-radius: .25em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  user-select: none;
+  height: 3em;
+  padding: 0 15px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  background: #616cf6;
+}
+
+.answer-item {
+  margin: 16px 0;
+  display: block;
+  cursor: pointer;
+}
+.answer-item input {
+  display: none;
+}
+.answer-item input + span {
+  line-height: 22px;
+  height: 22px;
+  padding-left: 22px;
+  display: block;
+  position: relative;
+}
+.answer-item input + span:not(:empty) {
+  padding-left: 30px;
+}
+.answer-item input + span:before, .answer-item input + span:after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  display: block;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.answer-item input + span:before {
+  background: #d1d7e3;
+  -webkit-transition: background 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+  transition: background 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+  transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+  transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2), -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+.answer-item input + span:after {
+  background: #fff;
+  -webkit-transform: scale(0.78);
+          transform: scale(0.78);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+  transition: -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4), -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+.answer-item input:checked + span:before {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  background: #4954d8;
+}
+.answer-item input:checked + span:after {
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.answer-item:hover input + span:before {
+  -webkit-transform: scale(0.92);
+          transform: scale(0.92);
+}
+.answer-item:hover input + span:after {
+  -webkit-transform: scale(0.74);
+          transform: scale(0.74);
+}
+.answer-item:hover input:checked + span:after {
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+}
+
+.error {
+  position: fixed;
+  max-width: 320px;
+  background: #ff9494;
+  border-radius: 4px;
+}
+
+.error ul {
+  padding: 0;
+}
+
+.error ul li {
+  padding: 0px 10px;
+  margin: 5px;
+  color: #000;
+  list-style: none;
+}
+
+/* Intro part */
+
+.intro_form {
+  width: 50%;
+  margin: 30px auto;
+}
+
+.intro_form input {
+  display: block;
+  margin-bottom: 1.5em;
+  width: 100%;
+  border: 1px solid #d2d8dd;
+  border-radius: .25em;
+  height: 3em;
+  padding: .375em .75em;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.intro_form input:focus {
+  box-shadow: none;
+  border-color: #4954d8;
+  color: #495057;
+  background-color: #fff;
+  outline: 0px;
+  box-shadow: 0 0 0 0.2em rgba(0,123,255,.25);
+}
+
+.intro_form button {
+  width: 100%;
+}
+
+/* Survey part */
+
+#surveyContainer, #finishContainer {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 948px) {
+  .title {
+    max-width: 100%;
+    font-size: 2.5em;
+  }
+
+  .intro_form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #surveyContainer, #finishContainer {
+    width: 90%;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step survey - HTML template</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="error">
+        <ul id="errorContainer"></ul>
+    </div>
+    <div class="container" id="introContainer">
+        <h1 class="title">Simple <strong>step survey</strong> HTML template</h1>
+        <p class="description">This survey is reading data from JSON format and can be used for simple surveys with one answer. <br>It also adopted to be useful on mobile screens.</p>
+        <div class="intro_form">
+            <input type="text" placeholder="Full name" id="name" />
+            <input type="phone" placeholder="Contact phone number" id="phone" />
+            <button id="startSurvey">Start survey</button>
+        </div>
+    </div>
+    <div class="container" id="surveyContainer">
+        <div id="progressBar"></div>
+        <h3 id="surveyQuestion"></h3>
+        <div id="questionsList"></div>
+        <button id="nextQuestion">Next</button>
+    </div>
+    <div class="container" id="finishContainer">
+        <h1 class="title">Thanks for your <strong>answers</strong></h1>
+        <p class="description">Have suggestions how to improve HTML markup or found bug? Create Pull Request or issue in our <a href="https://github.com/af23me/step-survey-html-template">gitlab</a></p>
+        
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
