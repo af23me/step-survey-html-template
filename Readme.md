@@ -2,6 +2,8 @@
 
 Simple HTML markup for step survey with output as object.
 
+[Demo link](https://af23me.github.io/step-survey-html-template/)
+
 ![Preview](preview.gif "Survey form view")
 
 # Incoming data format
