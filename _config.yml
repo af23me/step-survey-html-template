@@ -1,0 +1,10 @@
+---
+title: Step Survey Html Template
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
